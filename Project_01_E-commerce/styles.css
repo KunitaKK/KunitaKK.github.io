@@ -1153,6 +1153,7 @@ img {
 .payment-container {
     display: flex;
     width: 67%;
+    min-width: 800px;
     /* height: 90%; */
     border: 1px solid #ccc;
     border-radius: 7px;
@@ -1210,6 +1211,7 @@ img {
 
 .payment-center a {
     width: 100%;
+    height: 84.42px;
     padding: 15px;
     display: flex;
     justify-content: center;
