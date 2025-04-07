@@ -5,7 +5,7 @@ let app = document.getElementById('app');
 let temporaryContent = document.getElementById('temporaryContent');
 
 const loadTemplate = () => {
-    fetch('/template.html')
+    fetch('./template.html')
     .then(response => response.text())
     .then(html => {
         app.innerHTML = html;
@@ -21,7 +21,7 @@ const initApp = () => {
     let productId = new URLSearchParams(window.location.search).get('id');
     let thisProduct = products.filter(value => value.id == productId)[0];
     if(!thisProduct){
-        window.location.href = "/";
+        window.location.href = "./";
     }
 
     // Display current product details
@@ -59,7 +59,7 @@ const initApp = () => {
         let newProduct = document.createElement('div');
         newProduct.classList.add('item');
         newProduct.innerHTML = 
-        `<a href="/detail.html?id=${product.id}">
+        `<a href="./detail.html?id=${product.id}">
             <img src="${product.image}">
         </a>
         <h2>${product.name}</h2>
